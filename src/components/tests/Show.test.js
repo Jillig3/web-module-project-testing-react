@@ -5,10 +5,18 @@ import userEvent from '@testing-library/user-event';
 import Show from './../Show';
 
 const testShow = {
+    name: "",
+    summary: "",
+    seasons: [
+    {id:0, name: "", episodes: []}, 
+    ],
+    
     //add in approprate test data structure here.
-}
+};
 
 test('renders testShow and no selected Season without errors', ()=>{
+    render(<Show show={testShow}/>);
+
 });
 
 test('renders Loading component when prop show is null', () => {
