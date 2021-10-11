@@ -35,6 +35,7 @@ test("renders the summury test passed as prop", ()=>{
 
     expect(summary).toBeInTheDocument();
     expect(summary).toBeTruthy();
+    expect(summary).not.toBeNull();
 
 });
 
@@ -43,7 +44,7 @@ test("renders default image when image is not defined", ()=>{
 
     const defaultImage = <Episode src='./stranger_things.png'/>;
 
-    expect(defaultImage).toEqual('<img src= ./stranger_things.png />')
+    expect(defaultImage).toEqual(<Episode src='./stranger_things.png'/>);
     
 })
 
